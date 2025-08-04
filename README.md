@@ -15,14 +15,7 @@ The Transformer model introduces a pure self-attention encoder–decoder archite
 ![figure2](assets/figure2.png)
 ![figure3](assets/figure3.png)
 ![figure4](assets/figure4.png)
-Run `h` attention “heads” in parallel, each projecting `Q, K, V` with its own learnable matrices `W_i^Q, W_i^K, W_i^V`, computing scaled dot-product attention, then concatenating and linearly projecting the results with `W^O`:
-
-```text
-MultiHead(Q, K, V)
-= [head_1; …; head_h] W^O
-where
-  head_i = Attention(Q W_i^Q, K W_i^K, V W_i^V)
-```
+Run `h` attention “heads” in parallel, each projecting `Q, K, V` with its own learnable matrices `W_i^Q, W_i^K, W_i^V`, computing scaled dot-product attention, then concatenating and linearly projecting the results with `W^O`
 
 ## Parameters
 
