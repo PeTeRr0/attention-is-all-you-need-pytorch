@@ -2,13 +2,11 @@
 
 Pytorch implementation of Transformer of the paper [Attention Is All You Need](https://arxiv.org/pdf/1706.03762) by Google Research, Brain Team, Aidan N. Gomez, Illia Polosukhin. This paper demonstrates that the Transformer architecture can be applied effectively to domains outside of NLP, such as Computer Vision. This work introduces a pure self-attention architecture—eschewing recurrence and convolutions—and achieves state-of-the-art results on machine translation benchmarks.
 
-## Dependencies
-pip install torch torchvision torchaudio
-pip install datasets tqdm spacy functorch
-
 ## Download spaCy models
+```bash
 python -m spacy download en_core_web_sm
 python -m spacy download de_core_news_sm
+```
 
 ## The Transformer - Model Architecture
 ![figure1](assets/figure1.png)
