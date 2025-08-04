@@ -2,10 +2,6 @@
 
 Pytorch implementation of Transformer of the paper [Attention Is All You Need](https://arxiv.org/pdf/1706.03762) by Google Research, Brain Team, Aidan N. Gomez, Illia Polosukhin. This paper demonstrates that the Transformer architecture can be applied effectively to domains outside of NLP, such as Computer Vision. This work introduces a pure self-attention architecture—eschewing recurrence and convolutions—and achieves state-of-the-art results on machine translation benchmarks.
 
-## Usage
-git clone https://github.com/PeTeRr0/attention-is-all-you-need-pytorch.git
-cd attention-is-all-you-need-pytorch
-
 ## Dependencies
 pip install torch torchvision torchaudio
 pip install datasets tqdm spacy functorch
@@ -82,7 +78,7 @@ config = {
     "num_attention_heads": 8,
     "intermediate_size": 2048,
     "dropout": 0.1,
-    "max_len": 5000,
+    "max_len": 40,
     "batch_size": 32,
     "num_epochs": 3,
     "learning_rate": 1e-4,
@@ -94,9 +90,13 @@ config = {
 
 ## Results
 ![figure5](assets/figure5.png)
-Train loss, test loss and accuracy of the model during training.
+- **Loss:**  
+  - Training loss (blue) drops steadily to near zero.  
+  - Validation loss (orange) bottoms out around epoch 10 then rises, indicating overfitting.
 
-The model achieves 55.0% accuracy on the test set after 10 epochs of training.
+- **Accuracy:**  
+  - Validation accuracy peaks at ~36% around epoch 10.  
+  - It then falls back and plateaus near 33%, matching the validation-loss trend.
 
 ## Reference
 [Attention Is All You Need](https://arxiv.org/pdf/1706.03762), [The Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/#embeddings-and-softmax)
