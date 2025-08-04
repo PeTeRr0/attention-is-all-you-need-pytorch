@@ -4,6 +4,7 @@ Pytorch implementation of Transformer of the paper [Attention Is All You Need](h
 
 ## Download spaCy models
 ```bash
+# conda install -c conda-forge spacy
 python -m spacy download en_core_web_sm
 python -m spacy download de_core_news_sm
 ```
